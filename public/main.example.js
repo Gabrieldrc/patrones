@@ -1,3 +1,4 @@
+const entidades;
 let circulo;
 
 function setup() {
