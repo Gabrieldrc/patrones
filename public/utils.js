@@ -116,15 +116,20 @@ function actualizarVelocidadesRelativasEnColisión(cuerpo1, cuerpo2) {
 }
 
 
-var Mensajes = {
-    x: 250,
-    y: 20,
-    mensajes: [],
-    agregar: function(mensaje, tiempo) {
+class Mensajes {
+
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+        this.mensajes = []
+    }
+
+    agregar(mensaje, tiempo) {
         let t = tiempo || 160
         this.mensajes.push({texto: mensaje, tiempo: t})
-    },
-    mostrar: function() {
+    }
+    
+    mostrar() {
         filtrarLista(this.mensajes, m => m.tiempo > 0)
         if (!this.mensajes.length)
             return;
