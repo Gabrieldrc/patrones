@@ -16,4 +16,7 @@ function draw() {
     //dibujar
     fill(100,0,0) // esto rellena con color todas las figuras que vienen
     circle(circulo.x, circulo.y, 15)
+
+    textSize(12)
+    text(frameCount, 10, 15)
 }
